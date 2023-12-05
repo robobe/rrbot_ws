@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/user/projects/hexapod_ws/install/hexapod_gazebo/lib/python3.10/site-packages",
+        "/home/user/projects/hexapod_ws/install/hexapod_description/lib/python3.10/site-packages",
+        "/home/user/projects/hexapod_ws/install/hexapod_bringup/lib/python3.10/site-packages",
+        "/home/user/projects/hexapod_ws/install/hexapod_application/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/user/projects/hexapod_ws/install/hexapod_gazebo/lib/python3.10/site-packages",
+        "/home/user/projects/hexapod_ws/install/hexapod_description/lib/python3.10/site-packages",
+        "/home/user/projects/hexapod_ws/install/hexapod_bringup/lib/python3.10/site-packages",
+        "/home/user/projects/hexapod_ws/install/hexapod_application/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
