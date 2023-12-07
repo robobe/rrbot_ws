@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <!-- Revolute-Revolute Manipulator -->
-<!--
-Copied and modified from ROS1 example -
-https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_description/urdf/rrbot.xacro
--->
+
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="2dof_robot">
   <xacro:arg name="prefix" default="" />
 
-  <!-- Import RRBot macro -->
+
   <xacro:include filename="$(find rrbot_description)/urdf/rrbot.description.xacro" />
 
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find rrbot_description)/urdf/rrbot.materials.xacro" />
+
+  <xacro:include filename="$(find rrbot_description)/urdf/rrbot.gazebo.xacro" />
 
   <!-- Import RRBot ros2_control description -->
   <!-- <xacro:include filename="$(find ros2_control_demo_example_1)/ros2_control/rrbot.ros2_control.xacro" /> -->

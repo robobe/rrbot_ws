@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+Copied from ROS1 example -
+https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_description/urdf/materials.xacro
+-->
+<robot params="prefix">
+    <gazebo>
+        <plugin name="gazebo_ros_joint_state_publisher"
+            filename="libgazebo_ros_joint_state_publisher.so">
+            <update_rate>20</update_rate>
+            <joint_name>joint1</joint_name>
+            <joint_name>joint2</joint_name>
+        </plugin>
+    </gazebo>
+
+    <gazebo reference="${prefix}base_link">
+        <material>Gazebo/Black</material>
+      </gazebo>
+
+      <gazebo reference="${prefix}link1">
+        <material>Gazebo/Orange</material>
+      </gazebo>
+</robot>
