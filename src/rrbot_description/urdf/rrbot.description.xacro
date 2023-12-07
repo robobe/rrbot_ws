@@ -49,7 +49,7 @@
     <child link="${prefix}link1"/>
     <origin xyz="0 ${width} ${height1 - axel_offset}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <dynamics damping="0.7"/>
+    <dynamics damping="10.0"  friction="10.0"/>
   </joint>
 
   <!-- Middle Link -->
@@ -84,7 +84,7 @@
     <child link="${prefix}link2"/>
     <origin xyz="0 ${width} ${height2 - axel_offset*2}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <dynamics damping="0.7"/>
+    <dynamics damping="10.0"  friction="10.0"/>
   </joint>
 
   <!-- Top Link -->
