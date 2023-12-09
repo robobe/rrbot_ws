@@ -1,0 +1,23 @@
+<robot>
+
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <joint name="joint1">
+            <command_interface name="position" />
+            <state_interface name="position" />
+        </joint>
+        <joint name="joint2">
+            <command_interface name="position" />
+            <state_interface name="position" />
+        </joint>
+
+    </ros2_control>
+
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <parameters>$(find rrbot_bringup)/config/position.yaml</parameters>
+        </plugin>
+    </gazebo>
+</robot>
