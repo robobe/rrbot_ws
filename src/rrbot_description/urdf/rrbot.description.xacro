@@ -124,6 +124,16 @@
   <link name="${prefix}tool_link">
   </link>
 
+  <!-- imu link -->
+  <link name="${prefix}imu_link">
+  </link>
+
+  <joint name="${prefix}imu_link" type="fixed">
+    <origin xyz="0 0.1 1" rpy="0 0 0" />
+    <parent link="${prefix}link2"/>
+    <child link="${prefix}imu_link" />
+  </joint>
+
   </xacro:macro>
 
 </robot>

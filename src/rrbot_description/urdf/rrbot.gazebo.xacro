@@ -27,6 +27,13 @@ https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_desc
       <gazebo reference="link1">
         <material>Gazebo/Orange</material>
       </gazebo>
+
+      <gazebo reference="imu_link">
+        <sensor name="imu_sensor" type="imu">
+          <always_on>true</always_on>
+          <update_rate>30</update_rate>
+        </sensor>
+      </gazebo>
 </robot>
 
 <!-- 

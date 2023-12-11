@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "my_controller=rrbot_application.my_controller:main",
+            "sim_joint_state=rrbot_application.sim_joint_state:main"
         ],
     },
 )

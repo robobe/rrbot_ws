@@ -25,7 +25,15 @@ def generate_launch_description():
         arguments=["effort_controller", "--controller-manager", "/controller_manager"],
     )
 
+    imu_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["imu_sensor_broadcaster", "--controller-manager", "/controller_manager"],
+    )
+
     ld.add_action(joint_state_broadcaster_spawner)
     ld.add_action(position_controller_spawner)
     ld.add_action(effort_controller_spawner)
+    ld.add_action(imu_controller_spawner)
+    
     return ld
