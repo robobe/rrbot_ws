@@ -1,0 +1,8 @@
+build/
+install/
+log/
+logs/
+*.pyc
+archives
+patches
+callgrind*
