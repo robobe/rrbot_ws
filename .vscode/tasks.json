@@ -42,10 +42,10 @@
             "id": "package_name",
             "description": "package_name",
             "options": [
-                "XXX_application",
-                "XXX_description",
-                "XXX_bringup",
-                "XXX_gazebo"
+                "rrbot_application",
+                "rrbot_description",
+                "rrbot_bringup",
+                "rrbot_gazebo"
             ],
             "type": "pickString"
         },

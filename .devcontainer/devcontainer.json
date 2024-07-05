@@ -1,14 +1,14 @@
 {
-    "name": "XXX",
-    "workspaceFolder": "/workspaces/XXX_ws",
+    "name": "rrbot",
+    "workspaceFolder": "/workspaces/rrbot_ws",
     "build": {
         "context": "..",
         "dockerfile": "Dockerfile"
     },
     "remoteUser": "user",
     "runArgs": [
-        "--name=XXX",
-        "--hostname=XXX",
+        "--name=rrbot",
+        "--hostname=rrbot",
         "--privileged",
         "--network=host",
         "--device=/dev/dri:/dev/dri",
