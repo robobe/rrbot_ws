@@ -1,0 +1,17 @@
+session_name: rrbot_ws
+windows:
+  - window_name: sim
+    layout: tiled
+    suppress_history: false
+    shell_command_before:
+      - source /opt/ros/humble/setup.bash
+      - cd /workspaces/rrbot_ws
+      - source install/setup.bash
+    panes:
+      -  shell_command: # gazebo
+           - printf '\033]2;gazebo\033\'
+           - source /usr/share/gazebo/setup.bash
+           - ros2 launch rrbot_bringup sim.launch.py
+      -  shell_command: # spawn
+          - printf '\033]2;spawn\033\'
+          - ros2 launch rrbot_bringup spawn.launch.py

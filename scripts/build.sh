@@ -36,3 +36,15 @@ EOF
 
 sed -i "\$i ament_environment_hooks(\"\${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/\${PROJECT_NAME}.dsv.in\")" src/${NAME}_gazebo/CMakeLists.txt
 sed -i "\$i ament_environment_hooks(\"\${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/\${PROJECT_NAME}.dsv.in\")" src/${NAME}_description/CMakeLists.txt
+
+
+mkdir src/${NAME}_gazebo/worlds
+rm -rf src/${NAME}_description/include
+rm -rf src/${NAME}_description/src
+mkdir src/${NAME}_gazebo/models
+mkdir src/${NAME}_gazebo/urdf
+
+rm -rf src/${NAME}_bringup/include
+rm -rf src/${NAME}_bringup/src
+mkdir src/${NAME}_bringup/config
+mkdir src/${NAME}_bringup/launch

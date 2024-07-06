@@ -1,1 +1,1 @@
-alias app="tmuxp load src/apm_bringup/launch/app.yaml"
+alias app="tmuxp load src/rrbot_bringup/launch/app.yaml"

@@ -1,0 +1,21 @@
+{
+    "cmake_install": {
+		"scope": "yaml",
+		"prefix": "tmuxp_header",
+		"body": [
+			"session_name: $WORKSPACE_NAME",
+			"windows:",
+			"  - window_name: ${1}",
+            "    layout: tiled",
+            "    suppress_history: false",
+            "    shell_command_before:",
+            "      - source /opt/ros/humble/setup.bash",
+            "      - cd $WORKSPACE_FOLDER",
+            "      - source install/setup.bash",
+            "    panes:",
+            "      -  shell_command: # ${2}",
+            "           - printf '\\033]2;${2}\\033\\\\'"			
+		],
+		"description": "add tmuxp header file"
+	}
+}
