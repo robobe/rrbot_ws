@@ -23,16 +23,16 @@ class MyNode(Node):
         msg = JointTrajectory()
         header = Header()
         header.frame_id = "world"
-        
+        header.stamp = self.get_clock().now().to_msg()
         msg.header = header
         msg.joint_names = ["joint1", "joint2"]
         
         points = JointTrajectoryPoint()
-        points.positions = [1.0, 1.0]
+        points.positions = []
         points.velocities = []
         points.accelerations = []
-        points.effort = []
-        # points.time_from_start = Duration(sec=10)
+        points.effort = [10.0, 1.0]
+        points.time_from_start = Duration(sec=1)
 
         msg.points = [points]
         self.pub.publish(msg)
@@ -42,7 +42,7 @@ class MyNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = MyNode()
-    rclpy.spin(node)
+    rclpy.spin_once(node)
     node.destroy_node()
     rclpy.shutdown()
 
