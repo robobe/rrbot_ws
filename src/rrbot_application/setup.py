@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "trajectory=rrbot_application.joint_pose_trajectory_pose:main"
+            "trajectory=rrbot_application.joint_pose_trajectory_pose:main",
+            "e2p=rrbot_application.effort2pose:main"
         ],
     },
 )

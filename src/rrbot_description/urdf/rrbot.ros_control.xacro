@@ -1,11 +1,12 @@
 <robot>
 
+    <!-- Hardware-->
     <ros2_control name="GazeboSystem" type="system">
         <hardware>
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
         <joint name="joint1">
-            <command_interface name="position" />
+            <command_interface name="effort" />
             <state_interface name="position" />
         </joint>
         <joint name="joint2">
@@ -13,23 +14,12 @@
             <state_interface name="position" />
         </joint>
 
-        <sensor name="imu_sensor">
-            <state_interface name="orientation.x"/>
-            <state_interface name="orientation.y"/>
-            <state_interface name="orientation.z"/>
-            <state_interface name="orientation.w"/>
-            <state_interface name="angular_velocity.x"/>
-            <state_interface name="angular_velocity.y"/>
-            <state_interface name="angular_velocity.z"/>
-            <state_interface name="linear_acceleration.x"/>
-            <state_interface name="linear_acceleration.y"/>
-            <state_interface name="linear_acceleration.z"/>
-        </sensor>
     </ros2_control>
 
+    <!-- ros2 control gazebo plugin-->
     <gazebo>
         <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-            <parameters>$(find rrbot_bringup)/config/position_and_effort_imu.yaml</parameters>
+            <parameters>$(find rrbot_bringup)/config/efforts.yaml</parameters>
         </plugin>
     </gazebo>
 </robot>

@@ -1,0 +1,16 @@
+<robot>
+
+    <!-- Hardware-->
+    <ros2_control name="RealRobot" type="system">
+        <hardware>
+            <plugin>PWMMotorHardware</plugin>
+        </hardware>
+        <joint name="joint1">
+            <command_interface name="position" />
+            <state_interface name="position" />
+        </joint>
+        
+    </ros2_control>
+
+    
+</robot>

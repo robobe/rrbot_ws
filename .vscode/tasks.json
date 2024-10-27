@@ -45,7 +45,8 @@
                 "rrbot_application",
                 "rrbot_description",
                 "rrbot_bringup",
-                "rrbot_gazebo"
+                "rrbot_gazebo",
+                "pwm_motor_hardware"
             ],
             "type": "pickString"
         },

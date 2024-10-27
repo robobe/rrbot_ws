@@ -11,6 +11,10 @@ RUN apt-get update \
       ros-humble-joint-state-publisher-gui \
       # ros-humble-cv-bridge \
       # ros-humble-rosbridge-suite \
+      ros-humble-ros2-control \
+      ros-humble-ros2-controllers \
+      ros-humble-gazebo-ros2-control \
+      ros-humble-rviz2 \
    && apt-get autoremove -y \
    && apt-get clean -y \
    && rm -rf /var/lib/apt/lists/*

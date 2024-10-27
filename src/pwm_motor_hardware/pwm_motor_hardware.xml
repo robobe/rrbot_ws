@@ -1,0 +1,5 @@
+<library path="pwm_motor_hardware">
+    <class name="PWMMotorHardware" 
+    type="arduino_hw::PWMMotorHardware" 
+    base_class_type="hardware_interface::SystemInterface"/>
+</library>

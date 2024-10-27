@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "heavy_cart",
+            "includePath": [
+                "/opt/ros/humble/include/**",
+                "/workspaces/rrbot_ws/src/pwm_motor_hardware/include/**"
+            ],
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/clang-14",
+            "cStandard": "c17"
+        }
+    ],
+    "version": 4
+}
