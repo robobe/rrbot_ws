@@ -175,3 +175,11 @@ ros2 topic pub --once /desired_position std_msgs/msg/Float64MultiArray "data:
 
 
 
+---
+
+```
+ros2 launch rrbot_bringup controllers_s.launch.py
+
+ros2 topic pub /position_controller/commands std_msgs/msg/Float64MultiArray "{data: [1.0]}"
+ros2 topic echo --once /dynamic_joint_states
+```

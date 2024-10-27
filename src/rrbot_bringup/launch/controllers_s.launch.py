@@ -22,6 +22,16 @@ def generate_launch_description():
         output="both",
     )
 
+    state_node = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster", 
+                   "-c", "/controller_manager"
+                  ],
+        output="both",
+    )
+
     ld.add_action(control_node)
+    ld.add_action(state_node)
 
     return ld
