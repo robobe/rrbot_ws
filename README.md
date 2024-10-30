@@ -177,6 +177,8 @@ ros2 topic pub --once /desired_position std_msgs/msg/Float64MultiArray "data:
 
 ---
 
+# Custom plugin
+
 ```
 ros2 launch rrbot_bringup controllers_s.launch.py
 
